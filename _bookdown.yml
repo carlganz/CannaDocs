@@ -1,0 +1,5 @@
+book_filename: "CannaData Documentation"
+output_dir: "docs"
+language:
+  ui:
+    chapter_name: "Chapter "

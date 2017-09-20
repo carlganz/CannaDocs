@@ -1,0 +1,27 @@
+--- 
+title: "CannaData 0.0.0.900 Documentation"
+author: "Carl Ganz"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+github-repo: CannaData/CannaDocs
+description: "Documentation on how to use the CannaData platform."
+---
+
+<link rel="icon" type="image/png" href="https://s3-us-west-2.amazonaws.com/cannadatacdn/CannaData_Logo.png">
+
+<meta property="og:image" content="https://s3-us-west-1.amazonaws.com/www.cannadata.com/logo.png" />
+
+# Preliminaries
+
+The CannaData platform enables Marijuana dispensaries to manage their patients, inventory, point-of-sales, and online presense with one integrated platform. Each client receives a seperate Virtual Private Cloud instance where their data is securely stored. When you create an account with CannaData you will be given a unique url for your dispensary. For example, a dispensary named "storename" would likely receive the domain https://storename.cannadata.com where they can securely access the CannaData platform.
+
+An elegent, and up-to-date menu is readily available at https://storename.cannadata.com/menu, which can easily be integrated into your dispensaries webpage.
+
+CannaData is not simply a piece of software. We are your go-to data, and technology consultant. Once your dispensary is integrated into our data pipeline, we offer a variety of custom business services including reporting/analytics, tax planning, A/B testing for marketing campaigns, patient surveys, and more. 
+
+This documentation explains how to use the CannaData platform's 4 primary applicaitions. 
+
+## Contact
+
+We love getting feedback! Please email [Carl Ganz](mailto:carl@cannadatasolutions.com)
