@@ -24,7 +24,7 @@
 \usepackage[margin=1in]{geometry}
 \usepackage{hyperref}
 \hypersetup{unicode=true,
-            pdftitle={CannaData 0.0.0.900 Documentation},
+            pdftitle={CannaData 0.1 Documentation},
             pdfauthor={Carl Ganz},
             pdfborder={0 0 0},
             breaklinks=true}
@@ -76,7 +76,7 @@
 }
 
 \setlength{\droptitle}{-2em}
-  \title{CannaData 0.0.0.900 Documentation}
+  \title{CannaData 0.1 Documentation}
   \pretitle{\vspace{\droptitle}\centering\huge}
   \posttitle{\par}
   \author{Carl Ganz}
@@ -119,7 +119,7 @@
 
 The CannaData platform enables Marijuana dispensaries to manage their
 patients, inventory, point-of-sales, and online presense with one
-integrated platform. Each client receives a seperate Virtual Private
+integrated platform. Each client receives their own Virtual Private
 Cloud instance where their data is securely stored. When you create an
 account with CannaData you will be given a unique url for your
 dispensary. For example, a dispensary named ``storename'' would likely
@@ -127,7 +127,7 @@ receive the domain \url{https://storename.cannadata.com} where they can
 securely access the CannaData platform.
 
 An elegent, and up-to-date menu is readily available at
-\url{https://storename.cannadata.com/menu}, which can easily be
+\url{https://storename.cannadata.com/apps/menu/}, which can easily be
 integrated into your dispensaries webpage.
 
 CannaData is not simply a piece of software. We are your go-to data, and
@@ -136,8 +136,7 @@ pipeline, we offer a variety of custom business services including
 reporting/analytics, tax planning, A/B testing for marketing campaigns,
 patient surveys, and more.
 
-This documentation explains how to use the CannaData platform's 4
-primary applicaitions.
+This documentation explains how to use the CannaData platform.
 
 \section{Contact}\label{contact}
 
@@ -147,74 +146,85 @@ We love getting feedback! Please email
 \chapter{Frontdesk}\label{frontdesk}
 
 The Frontdesk is where every dispensary first makes contact with their
-patrons. Dispensaries must keep track of all patrons, and verify that
-they are valid medical marijuana patients. This requires checking-in
-each patron when they enter the store. The CannnaData Frontdesk
-application provides facilities for:
-
-\begin{itemize}
-\item
-  Checking-in patients
-\item
-  Adding new patients
-\end{itemize}
+clients. Dispensaries must keep track of all customers, and verify that
+they are valid medical marijuana patients. The CannnaData Frontdesk
+application provides facilities for checking-in and accepting new
+customers.
 
 \section{Returning Patients}\label{returning-patients}
 
-For returning patients, the front desk is responsible for:
+For returning clients, the front desk is responsible for:
 
 \begin{itemize}
 \item
-  Validating the returning patient is who they say they are
+  Validating a person is who they say they are
 \item
-  Making sure their medical card is still valid
+  Confirming they are a medical marijuana patient
 \item
-  Controlling how many patients are allowed in the store at one time,
-  and making sure that patients are processed in the correct order
+  Controlling how many customers are allowed in the store at one time,
+  and making sure that they are processed in the correct order
 \end{itemize}
 
-All patient interactions begin by scanning the patient's state issued
-ID. For returning patients this will pull up the patient's profile where
+All patient interactions begin by scanning the client's state issued ID.
+For returning customers this will pull up the patient's profile where
 the budtender can quickly see the patient's current medical status, as
-well as other basic information about the patient.
+well as other basic information about the patient. For valid patients,
+there are buttons for letting the patient directly into the store, or if
+there is a line to get in to the store, they can add the patient to the
+queue.
 
 \begin{figure}
 \centering
-\includegraphics{images/FD1.png}
+\includegraphics{images/patientInfo.png}
 \caption{Returning Patient Info}
 \end{figure}
 
-\textbf{(NOTE TO NAYELI: I don't know if the images are placed optimally
-in the patient info page. I tried this alternative set-up that may have
-potential but didn't really work out as I hoped. I'd appreciate your
-thoughts here.)}
+The patient info page provides basic data about the patient, as well as
+their medical info. The box at the top displays the number of days left
+until the patient's medical card expires. When expired, the box is red.
 
 \begin{figure}
 \centering
-\includegraphics{images/FDalt.png}
-\caption{Alternative Returning Patient Info}
+\includegraphics{images/expired.png}
+\caption{Expired Patient}
 \end{figure}
 
-This makes it easy to verify that the patient's medical card is still
-valid. You can also access a patient's info page by either searching for
-them in search box in the top, or by selecting them from the All
-Patients table.
+There are two graphs, one displaying the number of reward points the
+patient has accumulated, and a pie chart representing the product types
+from the patient's purchase history.
 
 \begin{figure}
 \centering
-\includegraphics{images/FD3.png}
+\includegraphics{images/patientInfo2.png}
+\caption{Patient Data}
+\end{figure}
+
+You can view details of past transactions by selecting a row from the
+patient history table.
+
+\begin{figure}
+\centering
+\includegraphics{images/pastTransaction.png}
+\caption{Past Transaction}
+\end{figure}
+
+For patients with expired medical cards, the patient info page lets you
+edit, and update the patients medical info.
+
+\includegraphics{images/edit1.png} \includegraphics{images/edit2.png}
+
+You can also access a patient's info page by either searching for them
+in search box at the top, or by selecting them from the All Patients
+tab.
+
+\begin{figure}
+\centering
+\includegraphics{images/allPatients.png}
 \caption{All Patient Table}
 \end{figure}
 
-For valid patients, the budtender has buttons at the top that allow them
-to let the patient directly into the store, or if there is a line to get
-in to the store, they can add the patient to a queue.
-
-\begin{figure}
-\centering
-\includegraphics{images/FD12.png}
-\caption{Returning Patient Buttons}
-\end{figure}
+The All Patients tab also allows you to view, which patient profiles are
+incomplete, and which registered patients have expired medical cards.
 
 \subsection{Queue}\label{queue}
 
@@ -225,54 +235,8 @@ been waiting.
 
 \begin{figure}
 \centering
-\includegraphics{images/FD2.png}
+\includegraphics{images/queue.png}
 \caption{Queue}
-\end{figure}
-
-\subsection{Charts}\label{charts}
-
-The patient info page provides charts and tables that are useful to the
-budtender. This includes:
-
-\begin{itemize}
-\item
-  The number of reward points the patient has accumulated (and how many
-  more points they need to get a prize)
-\item
-  Which types of products the patient has bought in the past
-\item
-  Details of past transactions
-\end{itemize}
-
-\begin{figure}
-\centering
-\includegraphics{images/FD4.png}
-\caption{Charts}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{images/FD5.png}
-\caption{Patient History}
-\end{figure}
-
-\subsection{Updating Info}\label{updating-info}
-
-When a patient's medical card expires they have to get a new card, and
-bring that information to the dispensary. All information in the patient
-info page is editable including the medical card info, and patient
-images.
-
-\begin{figure}
-\centering
-\includegraphics{images/FD6.png}
-\caption{Edit Medical Info}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics{images/FD7.png}
-\caption{Edit Images}
 \end{figure}
 
 \section{New Patients}\label{new-patients}
@@ -283,7 +247,7 @@ the new patient which initiates the patient sign-up process.
 
 \begin{figure}
 \centering
-\includegraphics{images/FD10.png}
+\includegraphics{images/addnew.png}
 \caption{Add New Patient Screen}
 \end{figure}
 
@@ -295,13 +259,13 @@ medical card ID number.
 
 \begin{figure}
 \centering
-\includegraphics{images/FD11.png}
+\includegraphics{images/NewPatient.png}
 \caption{Empty New Patient Form}
 \end{figure}
 
 \begin{figure}
 \centering
-\includegraphics{images/FD9.png}
+\includegraphics{images/newPatient2.png}
 \caption{Completed New Patient Form}
 \end{figure}
 
@@ -314,17 +278,12 @@ information into the Signup application discussed below.
 The Signup application works in conjunction with the Frontdesk app to
 let new patients quickly join a dispensary. When a new patient's ID is
 scanned they are added to the database, but their profile is incomplete.
-The budtender must input some information (discussed above), and the
-patient must complete the signup form (and sign the patient agreement),
-before they can enter the store. The first page of the signup form
-contains an input where the budtender can select the incomplete profile
-of the new patient.
-
-\begin{figure}
-\centering
-\includegraphics{images/S1.png}
-\caption{Select A New Patient}
-\end{figure}
+The budtender must input the patient's medical information (discussed
+above), and the patient must complete the signup form (and sign the
+patient agreement), before they can enter the store. The first page of
+the signup form contains an input where the budtender can select the
+incomplete profile of the new patient. If only one patient is signing up
+they will automatically be selected.
 
 Once the incomplete profile is selected the budtender would hand the
 iPad over to the new patient who would fill out the rest of the form.
@@ -333,12 +292,24 @@ the information on the patient's driver's license.
 
 \begin{figure}
 \centering
-\includegraphics{images/S2.png}
+\includegraphics{images/S1.png}
 \caption{Autofilled Basic Info}
 \end{figure}
 
-There are three additional pages where the patient fills in their
-contact info, and preferences.
+There are four additional pages where the patient fills in their contact
+info, and preferences.
+
+\begin{figure}
+\centering
+\includegraphics{images/S4.png}
+\caption{Contact Info}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{images/S2.png}
+\caption{Preference Info}
+\end{figure}
 
 \begin{figure}
 \centering
@@ -346,13 +317,15 @@ contact info, and preferences.
 \caption{Preference Info}
 \end{figure}
 
-\textbf{(NOTE TO NAYELI: I think the patient preference input is an area
-where we can be creative. In liue of the plain old checkboxes we could
-use cool icons representing flower, concentrate, edibles, etc.)}
+\begin{figure}
+\centering
+\includegraphics{images/S5.png}
+\caption{Other Info}
+\end{figure}
 
-After the patient completes the form they are automatically sent to a
-page where they digitally sign the new patient agreement contract. This
-makes the signup process completely paperless.
+After the patient completes the form they are automatically sent to
+DocuSign where they digitally sign the new patient agreement contract.
+This makes the signup process completely paperless.
 
 \chapter{Inventory}\label{inventory}
 
@@ -378,7 +351,10 @@ into your database. Digitally managing inventory doesn't just make it
 easier to keep track of products, but it also simplifies the record
 keeping process required for taxes, and other regulations.
 
-\includegraphics{images/I1.png} \includegraphics{images/I2.png}
+\includegraphics{images/newInv.png} \includegraphics{images/newInv2.png}
+
+\includegraphics{images/newInv3.png}
+\includegraphics{images/newInv4.png}
 
 There are several required fields in the new inventory form:
 
@@ -403,6 +379,9 @@ required sometimes:
 \begin{itemize}
 \item
   Product Name (required if no strain selected)
+\item
+  Specific Product Type (i.e.~is concentrate wax/shatter/kief? is edible
+  cookie/brownie/cheeseburger?)
 \item
   Description
 \item
@@ -439,14 +418,20 @@ gram (\$60 per gram) rate.
 \section{Past Products}\label{past-products}
 
 Details about existing and past products are easily accessible. You can
-search for any past inventory and all wholesalers in the search box at
-the top. You can also view current inventory in the current inventory
-table.
+search for any inventory or wholesaler in the search box at the top. You
+can also view tables containing current inventory, old inventory, and
+wholesalers on the main page.
 
 \begin{figure}
 \centering
-\includegraphics{images/I4.png}
+\includegraphics{images/inventory.png}
 \caption{Current Inventory Table}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{images/inventory2.png}
+\caption{Old Inventory and Wholesalers}
 \end{figure}
 
 When you select an item you are taken to the product information page.
@@ -456,7 +441,7 @@ inventory and print barcodes for the product.
 
 \begin{figure}
 \centering
-\includegraphics{images/I5.png}
+\includegraphics{images/productInfo.png}
 \caption{Current Inventory Table}
 \end{figure}
 
@@ -466,26 +451,198 @@ against other similar products.
 
 \begin{figure}
 \centering
-\includegraphics{images/I6.png}
+\includegraphics{images/productInfo2.png}
 \caption{Current Inventory Table}
 \end{figure}
 
 \section{Wholesaler}\label{wholesaler}
 
-You can also view information about specific wholesalers. When you
-select an item the item's wholesaler is available in the wholesaler
-page. You can also select a wholesaler in the search box at the top.
+You can also view information about individual wholesalers. You can
+select a wholesaler in the search bar at the top or in the wholesaler
+table in the homepage. Alternatively, when you select a product the
+wholesaler page displays info for that product's wholesaler.
 
 \begin{figure}
 \centering
-\includegraphics{images/I7.png}
-\caption{Current Inventory Table}
+\includegraphics{images/wholesaler.png}
+\caption{Wholesaler Info}
 \end{figure}
 
 Analytics about the wholesaler including daily sales, average daily
 profit, and product type.
 
+\begin{figure}
+\centering
+\includegraphics{images/wholesaler2.png}
+\caption{Wholesaler Analytics}
+\end{figure}
+
+\section{New Wholesalers}\label{new-wholesalers}
+
+New wholesalers can be added in either the new inventory page:
+
+\begin{figure}
+\centering
+\includegraphics{images/newWholesaler.png}
+\caption{New Wholesaler in New Inventory Page}
+\end{figure}
+
+Or in the wholesaler info page:
+
+\begin{figure}
+\centering
+\includegraphics{images/newWholesaler2.png}
+\caption{New Wholesaler in Wholesaler Info Page}
+\end{figure}
+
+\section{Labels}\label{labels}
+
+Many dispensaries use labels and barcodes to organize their inventory.
+There are two frameworks for using labels:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Prepackage all products in advance
+\item
+  Keep products in larger container, and weigh out and package for each
+  sale like a deli
+\end{enumerate}
+
+The second method is the most common, and it typically requires printing
+one or two labels to place on the primary container. The first method
+involves printing out a label for each prepackaged unit.
+
+The product info page has a ``print label'' button, which provides the
+user with a choice of either printing \emph{simple} labels for the
+second method, or prepackaging the product.
+
+\chapter{Point of Sales}\label{point-of-sales}
+
+The point-of-sales application provides facilities for:
+
+\begin{itemize}
+\item
+  Viewing patient info
+\item
+  Viewing current inventory
+\item
+  Processing transactions
+\end{itemize}
+
+\section{Patient Selection}\label{patient-selection}
+
+To begin, you must select the current patient. The list of checked-in
+patients is available in the navbar.
+
+\begin{figure}
+\centering
+\includegraphics{images/P1.png}
+\caption{Checked-in Patients can be selected in navbar}
+\end{figure}
+
+\section{Patient Info}\label{patient-info}
+
+Once a patient is selected, their information appears at the top.
+
+\begin{figure}
+\centering
+\includegraphics{images/P2.png}
+\caption{Patient info appears once patient is selected}
+\end{figure}
+
+A more information about the patient is available by pressing the
+eyeball to the top right of the patient information.
+
+\begin{figure}
+\centering
+\includegraphics{images/P3.png}
+\caption{Detailed info about the patient}
+\end{figure}
+
+This provides details about the patient's purchase history, as well as
+the specifics of the patient's previous transactions.
+
+\begin{figure}
+\centering
+\includegraphics{images/P4.png}
+\caption{Details from patient's previous transaction}
+\end{figure}
+
+\section{Sales}\label{sales}
+
+There are two ways to add an item to the cart: by scanning a barcode, or
+by selecting an item from the inventory table. When scanned, or
+selected, the budtender is prompted to enter the exact information about
+the sale: the quantity sold, and the price. The budtender also has the
+option of applying a discount. (The discount info is automatically
+populated if you register the coupon in the connect app i.e.~if you
+create Wax Wednesday the discount will automaticaly populate for
+concentrates on Wednesdays)
+
+\begin{figure}
+\centering
+\includegraphics{images/P5.png}
+\caption{Adding 1/4th of an Oz of Banana OG}
+\end{figure}
+
+You can enter arbitrary quantities, and it will determine the price.
+Discounts can be added as either flat rates (i.e. \$10) or percentages.
+
+\begin{figure}
+\centering
+\includegraphics{images/P6.png}
+\caption{Adding 21 grams of Banana OG, and applying Happy Hour discount}
+\end{figure}
+
+When added, the item appears in the cart. This information is not
+session specific so you can leave the app, or process another patient's
+transaction, and when you return the item will remain in the patient's
+cart.
+
+Item's in the cart can be edited by pressing the green pencil.
+
+\begin{figure}
+\centering
+\includegraphics{images/P7.png}
+\caption{Cart after adding Banana OG}
+\end{figure}
+
+\section{Searching}\label{searching}
+
+When not using a barcode, it is often useful to search for the item you
+are entering by name. You can also search for items by various
+attributes like product type, strain name, strain type, and description.
+
+\begin{figure}
+\centering
+\includegraphics{images/P8.png}
+\caption{Searching for flower in inventory}
+\end{figure}
+
+\section{Completing Transaction}\label{completing-transaction}
+
+To complete the transaction press the green ``charge'' button on the
+bottom right. This will prompt the budtender to enter the amount of cash
+tendered. The budtender can enter the amount by either entering the
+bills (i.e.~if budtender is handed two twenties and a ten they press
+\$20, \$20, \$10) or by simply entering the amount (i.e.~press 5 then
+0).
+
+\includegraphics{images/P9.png} \includegraphics{images/P10.png}
+
+Once the amount paid is submitted, the amount of change is returned, and
+the transaction is complete.
+
+\begin{figure}
+\centering
+\includegraphics{images/P11.png}
+\caption{After submitting amount paid, the amount of charge is given}
+\end{figure}
+
 \chapter{Connect}\label{connect}
+
+\textbf{UNDER CONSTRUCTION}
 
 Many dispensaries try to encourage patients to come to their store with
 coupons, and targeted messages. The Connect Application provides
@@ -552,13 +709,6 @@ The required information for a new coupon is:
 \caption{Blank new coupon targeted at specific items}
 \end{figure}
 
-\textbf{(NOTE TO NAYELI: For specific items there is a problem in that
-you are forced to select a single discount, and quantity for all the
-specific items. It would be better if they could select different
-discounts and quantities for the individual items. When you send me code
-for menu I may use a version of that to recreate the specific item part.
-I'd appreciate your thoughts here.)}
-
 \subsection{Coupon Info}\label{coupon-info}
 
 You can view information about existing coupons by selecting them in the
@@ -611,15 +761,13 @@ You can review the info about past messages by selected the message in
 the search box at the top. This will give you basic info about the
 message like when it was sent, to whom, and its content. There is also a
 graph of daily sales of the patients who were messaged, which makes it
-easy to check whether the message let to a noticable increase in sales.
+easy to check whether the message led to a noticable increase in sales.
 
 \begin{figure}
 \centering
 \includegraphics{images/C7.png}
 \caption{Message Info for Wax Alert}
 \end{figure}
-
-\chapter{Point of Sales}\label{point-of-sales}
 
 
 \end{document}

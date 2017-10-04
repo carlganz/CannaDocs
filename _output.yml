@@ -3,7 +3,7 @@ bookdown::gitbook:
   config:
     toc:
       before: |
-        <li><a href="./">CannaData</a></li>
+        <li><a href="./" style = "text-align:center"><img src= "images/logo.svg" style = "height:auto;width:200px;"></img></a></li>
       after: |
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
     download: ["pdf", "epub"]

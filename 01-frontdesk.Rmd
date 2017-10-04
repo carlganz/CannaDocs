@@ -2,95 +2,82 @@
 
 <link rel="icon" type="image/png" href="https://s3-us-west-2.amazonaws.com/cannadatacdn/CannaData_Logo.png">
 
-The Frontdesk is where every dispensary first makes contact with their patrons. Dispensaries must keep track of all patrons, and verify that they are valid medical marijuana patients. This requires checking-in each patron when they enter the store. The CannnaData Frontdesk application provides facilities for:
-
-* Checking-in patients
-
-* Adding new patients
+The Frontdesk is where every dispensary first makes contact with their clients. Dispensaries must keep track of all customers, and verify that they are valid medical marijuana patients. The CannnaData Frontdesk application provides facilities for checking-in and accepting new customers. 
 
 ## Returning Patients
 
-For returning patients, the front desk is responsible for:
+For returning clients, the front desk is responsible for:
 
-* Validating the returning patient is who they say they are
+* Validating a person is who they say they are
 
-* Making sure their medical card is still valid
+* Confirming they are a medical marijuana patient
 
-* Controlling how many patients are allowed in the store at one time, and making sure that patients are processed in the correct order
+* Controlling how many customers are allowed in the store at one time, and making sure that they are processed in the correct order
 
-All patient interactions begin by scanning the patient's state issued ID. For returning patients this will pull up the patient's profile where the budtender can quickly see the patient's current medical status, as well as other basic information about the patient. 
+All patient interactions begin by scanning the client's state issued ID. For returning customers this will pull up the patient's profile where the budtender can quickly see the patient's current medical status, as well as other basic information about the patient. For valid patients, there are buttons for letting the patient directly into the store, or if there is a line to get in to the store, they can add the patient to the queue. 
 
-![Returning Patient Info](images/FD1.png)
+![Returning Patient Info](images/patientInfo.png)
 
-**(NOTE TO NAYELI: I don't know if the images are placed optimally in the patient info page. I tried this alternative set-up that may have potential but didn't really work out as I hoped. I'd appreciate your thoughts here.)**
+The patient info page provides basic data about the patient, as well as their medical info. The box at the top displays the number of days left until the patient's medical card expires. When expired, the box is red. 
 
-![Alternative Returning Patient Info](images/FDalt.png)
+![Expired Patient](images/expired.png)
 
-This makes it easy to verify that the patient's medical card is still valid. You can also access a patient's info page by either searching for them in search box in the top, or by selecting them from the All Patients table. 
+There are two graphs, one displaying the number of reward points the patient has accumulated, and a pie chart representing the product types from the patient's purchase history. 
 
-![All Patient Table](images/FD3.png)
+![Patient Data](images/patientInfo2.png)
 
-For valid patients, the budtender has buttons at the top that allow them to let the patient directly into the store, or if there is a line to get in to the store, they can add the patient to a queue. 
+You can view details of past transactions by selecting a row from the patient history table.
 
-![Returning Patient Buttons](images/FD12.png)
+![Past Transaction](images/pastTransaction.png)
+
+For patients with expired medical cards, the patient info page lets you edit, and update the patients medical info.
+
+![Edit Image](images/edit1.png)
+![Edit Expiration Date](images/edit2.png)
+
+You can also access a patient's info page by either searching for them in search box at the top, or by selecting them from the All Patients tab. 
+
+![All Patient Table](images/allPatients.png)
+
+The All Patients tab also allows you to view, which patient profiles are incomplete, and which registered patients have expired medical cards.
 
 ### Queue
 
 The homepage of the Frontdesk app keeps track of who is currently in the store, and who is currently in line to get in the store (queue). These tables make it easy to see who is next in line, and how long people have been waiting. 
 
-![Queue](images/FD2.png)
-
-### Charts
-
-The patient info page provides charts and tables that are useful to the budtender. This includes:
-
-* The number of reward points the patient has accumulated (and how many more points they need to get a prize)
-
-* Which types of products the patient has bought in the past
-
-* Details of past transactions
-
-![Charts](images/FD4.png)
-
-![Patient History](images/FD5.png)
-
-### Updating Info
-
-When a patient's medical card expires they have to get a new card, and bring that information to the dispensary. All information in the patient info page is editable including the medical card info, and patient images. 
-
-![Edit Medical Info](images/FD6.png)
-
-![Edit Images](images/FD7.png)
+![Queue](images/queue.png)
 
 ## New Patients
 
 For new patients, when their ID is scanned a message will appear indicating that the patient is new. The budtender has the option to add the new patient which initiates the patient sign-up process. 
 
-![Add New Patient Screen](images/FD10.png)
+![Add New Patient Screen](images/addnew.png)
 
 When the patient's ID is first scanned, the information from their ID is automatically added. The budtender uploads the patient's documents, and enter a small amount of information from the patient's medical card, specifically the name of their doctor, the expiration date, and the medical card ID number. 
 
-![Empty New Patient Form](images/FD11.png)
+![Empty New Patient Form](images/NewPatient.png)
 
-![Completed New Patient Form](images/FD9.png)
+![Completed New Patient Form](images/newPatient2.png)
 
 While the budtender enters this information, the patient is presented with an iPad (or other tablet or computer) where they enter their information into the Signup application discussed below.
 
 ### Signup
 
-The Signup application works in conjunction with the Frontdesk app to let new patients quickly join a dispensary. When a new patient's ID is scanned they are added to the database, but their profile is incomplete. The budtender must input some information (discussed above), and the patient must complete the signup form (and sign the patient agreement), before they can enter the store. The first page of the signup form contains an input where the budtender can select the incomplete profile of the new patient. 
-
-![Select A New Patient](images/S1.png)
+The Signup application works in conjunction with the Frontdesk app to let new patients quickly join a dispensary. When a new patient's ID is scanned they are added to the database, but their profile is incomplete. The budtender must input the patient's medical information (discussed above), and the patient must complete the signup form (and sign the patient agreement), before they can enter the store. The first page of the signup form contains an input where the budtender can select the incomplete profile of the new patient. If only one patient is signing up they will automatically be selected. 
 
 Once the incomplete profile is selected the budtender would hand the iPad over to the new patient who would fill out the rest of the form. The first page of the signup form is automatically filled in based on the information on the patient's driver's license. 
 
-![Autofilled Basic Info](images/S2.png)
+![Autofilled Basic Info](images/S1.png)
 
-There are three additional pages where the patient fills in their contact info, and preferences. 
+There are four additional pages where the patient fills in their contact info, and preferences. 
+
+![Contact Info](images/S4.png)
+
+![Preference Info](images/S2.png)
 
 ![Preference Info](images/S3.png)
 
-**(NOTE TO NAYELI: I think the patient preference input is an area where we can be creative. In liue of the plain old checkboxes we could use cool icons representing flower, concentrate, edibles, etc.)**
+![Other Info](images/S5.png)
 
-After the patient completes the form they are automatically sent to a page where they digitally sign the new patient agreement contract. This makes the signup process completely paperless. 
+After the patient completes the form they are automatically sent to DocuSign where they digitally sign the new patient agreement contract. This makes the signup process completely paperless. 
 

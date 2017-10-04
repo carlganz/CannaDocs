@@ -18,8 +18,11 @@ The Inventory Management application provides facilities for:
 
 The new inventory page allows you to enter new shipments of inventory into your database. Digitally managing inventory doesn't just make it easier to keep track of products, but it also simplifies the record keeping process required for taxes, and other regulations.
 
-![New Product Pt. 1](images/I1.png)
-![New Product Pt. 2](images/I2.png)
+![Empty Form 1](images/newInv.png)
+![Empty Form 2](images/newInv2.png)
+
+![Filled Form 1](images/newInv3.png)
+![Filled Form 2](images/newInv4.png)
 
 There are several required fields in the new inventory form:
 
@@ -38,6 +41,8 @@ There are several required fields in the new inventory form:
 There are also several optional inputs, and inputs that are only required sometimes:
 
 * Product Name (required if no strain selected)
+
+* Specific Product Type (i.e. is concentrate wax/shatter/kief? is edible cookie/brownie/cheeseburger?)
 
 * Description
 
@@ -58,22 +63,48 @@ The price input contains default values based on the product type. Whenever a va
 
 ## Past Products
 
-Details about existing and past products are easily accessible. You can search for any past inventory and all wholesalers in the search box at the top. You can also view current inventory in the current inventory table.
+Details about existing and past products are easily accessible. You can search for any inventory or wholesaler in the search box at the top. You can also view tables containing current inventory, old inventory, and wholesalers on the main page.
 
-![Current Inventory Table](images/I4.png)
+![Current Inventory Table](images/inventory.png)
+
+![Old Inventory and Wholesalers](images/inventory2.png)
 
 When you select an item you are taken to the product information page. This includes a variety of tables regarding the specific product with the option to edit. Buttons at the top allow to quickly add more inventory and print barcodes for the product.
 
-![Current Inventory Table](images/I5.png)
+![Current Inventory Table](images/productInfo.png)
 
 Basic analytics are provided so you can quickly see how the product is performing. Daily sales are charted, and average daily profit is rated against other similar products.
 
-![Current Inventory Table](images/I6.png)
+![Current Inventory Table](images/productInfo2.png)
 
 ## Wholesaler
 
-You can also view information about specific wholesalers. When you select an item the item's wholesaler is available in the wholesaler page. You can also select a wholesaler in the search box at the top.
+You can also view information about individual wholesalers. You can select a wholesaler in the search bar at the top or in the wholesaler table in the homepage. Alternatively, when you select a product the wholesaler page displays info for that product's wholesaler. 
 
-![Current Inventory Table](images/I7.png)
+![Wholesaler Info](images/wholesaler.png)
 
 Analytics about the wholesaler including daily sales, average daily profit, and product type. 
+
+![Wholesaler Analytics](images/wholesaler2.png)
+
+## New Wholesalers
+
+New wholesalers can be added in either the new inventory page:
+
+![New Wholesaler in New Inventory Page](images/newWholesaler.png)
+
+Or in the wholesaler info page: 
+
+![New Wholesaler in Wholesaler Info Page](images/newWholesaler2.png)
+
+## Labels
+
+Many dispensaries use labels and barcodes to organize their inventory. There are two frameworks for using labels:
+
+1. Prepackage all products in advance 
+
+2. Keep products in larger container, and weigh out and package for each sale like a deli
+
+The second method is the most common, and it typically requires printing one or two labels to place on the primary container. The first method involves printing out a label for each prepackaged unit. 
+
+The product info page has a "print label" button, which provides the user with a choice of either printing *simple* labels for the second method, or prepackaging the product. 
