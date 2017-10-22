@@ -118,23 +118,13 @@
 \chapter{Preliminaries}\label{preliminaries}
 
 The CannaData platform enables Marijuana dispensaries to manage their
-patients, inventory, point-of-sales, and online presense with one
+patients, inventory, point-of-sales, and online presence with one
 integrated platform. Each client receives their own Virtual Private
-Cloud instance where their data is securely stored. When you create an
-account with CannaData you will be given a unique url for your
-dispensary. For example, a dispensary named ``storename'' would likely
-receive the domain \url{https://storename.cannadata.com} where they can
-securely access the CannaData platform.
-
-An elegent, and up-to-date menu is readily available at
-\url{https://storename.cannadata.com/apps/menu/}, which can easily be
-integrated into your dispensaries webpage.
-
-CannaData is not simply a piece of software. We are your go-to data, and
-technology consultant. Once your dispensary is integrated into our data
-pipeline, we offer a variety of custom business services including
-reporting/analytics, tax planning, A/B testing for marketing campaigns,
-patient surveys, and more.
+Cloud where their data is securely stored. When you create an account
+with CannaData you will be given a unique URL for your dispensary. For
+example, a dispensary named ``demo'' would likely receive the domain
+\url{https://demo.cannadata.com} where they can access the CannaData
+platform.
 
 This documentation explains how to use the CannaData platform.
 
@@ -146,12 +136,37 @@ We love getting feedback! Please email
 \chapter{Frontdesk}\label{frontdesk}
 
 The Frontdesk is where every dispensary first makes contact with their
-clients. Dispensaries must keep track of all customers, and verify that
-they are valid medical marijuana patients. The CannnaData Frontdesk
-application provides facilities for checking-in and accepting new
-customers.
+clients. Dispensaries must keep track of all customers and verify that
+they are valid medical marijuana patients. The CannaData Frontdesk page
+makes this easy by providing a custom interface for checking in and
+accepting new patients.
 
-\section{Returning Patients}\label{returning-patients}
+\section{Sidebar}\label{sidebar}
+
+On the left of the page is a sidebar with five options. The five
+subpages are:
+
+\begin{itemize}
+\item
+  Homepage: where you can view who is currently in the store, in queue,
+  and pending online orders.
+\item
+  All Patients: where you can see all past patients, and incomplete
+  profiles.
+\item
+  Patient Info: when a specific patient is selected this page will
+  display their information, and allow you to let the patient into your
+  store.
+\item
+  New Patient: when a new patient is processed, this is the page where
+  you enter their information.
+\item
+  Online Sale: when processing an online order, this page will display
+  the order info, and provide options for completing the order.
+\end{itemize}
+
+\hypertarget{returning-patients}{\section{Returning
+Patients}\label{returning-patients}}
 
 For returning clients, the front desk is responsible for:
 
@@ -163,15 +178,17 @@ For returning clients, the front desk is responsible for:
 \item
   Controlling how many customers are allowed in the store at one time,
   and making sure that they are processed in the correct order
+\item
+  If the patient preordered, making sure their preorder is processed
+  correctly
 \end{itemize}
 
 All patient interactions begin by scanning the client's state issued ID.
 For returning customers this will pull up the patient's profile where
 the budtender can quickly see the patient's current medical status, as
-well as other basic information about the patient. For valid patients,
-there are buttons for letting the patient directly into the store, or if
-there is a line to get in to the store, they can add the patient to the
-queue.
+well as other basic information about the patient. With a single button
+press, valid patients can be allowed into the store, or if there is a
+line to get in, added to the patient queue.
 
 \begin{figure}
 \centering
@@ -189,9 +206,9 @@ until the patient's medical card expires. When expired, the box is red.
 \caption{Expired Patient}
 \end{figure}
 
-There are two graphs, one displaying the number of reward points the
-patient has accumulated, and a pie chart representing the product types
-from the patient's purchase history.
+The page also displays the number of reward points the patient has
+accumulated, and a pie chart with the product types from the patient's
+purchase history.
 
 \begin{figure}
 \centering
@@ -209,13 +226,13 @@ patient history table.
 \end{figure}
 
 For patients with expired medical cards, the patient info page lets you
-edit, and update the patients medical info.
+edit and update the patient's medical info.
 
 \includegraphics{images/edit1.png} \includegraphics{images/edit2.png}
 
-You can also access a patient's info page by either searching for them
-in search box at the top, or by selecting them from the All Patients
-tab.
+You can also access a patient's info page by scanning their ID,
+searching for them in search box at the top, or by selecting them from
+the All Patients tab.
 
 \begin{figure}
 \centering
@@ -228,10 +245,11 @@ incomplete, and which registered patients have expired medical cards.
 
 \subsection{Queue}\label{queue}
 
-The homepage of the Frontdesk app keeps track of who is currently in the
-store, and who is currently in line to get in the store (queue). These
-tables make it easy to see who is next in line, and how long people have
-been waiting.
+The homepage of the Frontdesk app keeps track of online sales, who is
+currently in the store, and who is currently in line to get in the store
+(queue). These tables make it easy to see who is next in line, and how
+long people have been waiting. Online sales are discussed in greater
+detail \protect\hyperlink{online-orders}{here}.
 
 \begin{figure}
 \centering
@@ -252,14 +270,14 @@ the new patient which initiates the patient sign-up process.
 \end{figure}
 
 When the patient's ID is first scanned, the information from their ID is
-automatically added. The budtender uploads the patient's documents, and
-enter a small amount of information from the patient's medical card,
-specifically the name of their doctor, the expiration date, and the
-medical card ID number.
+automatically added, however their profile is incomplete. The budtender
+must upload the patient's documents, and enter a small amount of
+information from the patient's medical card, specifically the name of
+their doctor, the expiration date, and the medical card ID number.
 
 \begin{figure}
 \centering
-\includegraphics{images/NewPatient.png}
+\includegraphics{images/newPatient.png}
 \caption{Empty New Patient Form}
 \end{figure}
 
@@ -282,13 +300,14 @@ The budtender must input the patient's medical information (discussed
 above), and the patient must complete the signup form (and sign the
 patient agreement), before they can enter the store. The first page of
 the signup form contains an input where the budtender can select the
-incomplete profile of the new patient. If only one patient is signing up
-they will automatically be selected.
+incomplete profile of the new patient. Typically there is only one
+incomplete profile at a time, in which case the one incomplete profile
+is automatically selected.
 
-Once the incomplete profile is selected the budtender would hand the
-iPad over to the new patient who would fill out the rest of the form.
-The first page of the signup form is automatically filled in based on
-the information on the patient's driver's license.
+The budtender would hand the iPad over to the new patient who would fill
+out the rest of the form. The first page of the signup form is
+automatically filled in based on the information on the patient's
+driver's license.
 
 \begin{figure}
 \centering
@@ -327,6 +346,114 @@ After the patient completes the form they are automatically sent to
 DocuSign where they digitally sign the new patient agreement contract.
 This makes the signup process completely paperless.
 
+\hypertarget{online-orders}{\section{Online
+Orders}\label{online-orders}}
+
+Whenever new online orders are made a notification will appear in the
+bottom right corner of the frontdesk app, and the new order will appear
+in the online orders table in the homepage. We will discuss the online
+menu, and online ordering process in more detail in the
+\href{online.html}{Online Orders chapter}, so for now we will just focus
+on processing online orders at the frontdesk.
+
+\begin{figure}
+\centering
+\includegraphics{images/online1.png}
+\caption{New Online Order}
+\end{figure}
+
+When you first receive a new order it is unconfirmed. Select the order
+by either pressing the alert in the bottom right, selecting the order in
+the table in the homepage, or by selecting the order in the search bar
+at the top.
+
+\begin{figure}
+\centering
+\includegraphics{images/online2.png}
+\caption{Online Order Info}
+\end{figure}
+
+The order info page allows you to do several things:
+
+\begin{itemize}
+\tightlist
+\item
+  You can edit items
+\end{itemize}
+
+\begin{figure}
+\centering
+\includegraphics{images/online3.png}
+\caption{Edit Online Order}
+\end{figure}
+
+\begin{itemize}
+\tightlist
+\item
+  Print labels
+\end{itemize}
+
+\begin{figure}
+\centering
+\includegraphics{images/online4.png}
+\caption{Select printer for labels}
+\end{figure}
+
+\begin{itemize}
+\tightlist
+\item
+  Confirm
+\end{itemize}
+
+\begin{figure}
+\centering
+\includegraphics{images/online5.png}
+\caption{Send confirmation message}
+\end{figure}
+
+\begin{itemize}
+\tightlist
+\item
+  Cancel
+\end{itemize}
+
+\begin{figure}
+\centering
+\includegraphics{images/online6.png}
+\caption{Send cancellation message}
+\end{figure}
+
+Once an order is confirmed the alert in the corner will go away, and the
+status in the main table will update.
+
+\begin{figure}
+\centering
+\includegraphics{images/online7.png}
+\caption{Confirmed order}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{images/online8.png}
+\caption{Patient is checked in}
+\end{figure}
+
+When the patient comes to pick up their order you must check them in
+like any other patient, as
+\protect\hyperlink{returning-patients}{discussed above}. Once they are
+checked in you link the online order with the checked in patient by
+clicking the ``Link'' button in the online order page.
+
+\begin{figure}
+\centering
+\includegraphics{images/online10.png}
+\caption{Link button}
+\end{figure}
+
+\includegraphics{images/online9.png} Once the order is linked to the
+patient, they can proceed to the cash register where they can quickly
+complete the transaction.
+
 \chapter{Inventory}\label{inventory}
 
 The Inventory Management application provides facilities for:
@@ -344,14 +471,31 @@ The Inventory Management application provides facilities for:
   Print labels/barcodes for inventory
 \end{itemize}
 
+\section{Sidebar}\label{sidebar-1}
+
+On the left of the page is a sidebar with four options. The four
+subpages are:
+
+\begin{itemize}
+\item
+  Inventory: where you can view all current, and past inventory, as well
+  as all wholesalers.
+\item
+  Product Info: when a specific product is selected this page will
+  display information about the product.
+\item
+  New Product: this page lets you enter new inventory.
+\item
+  Wholesaler: when a product is selected this page shows information
+  about the product's wholesaler. When a wholesaler is selected this
+  page displays information about the wholesaler.
+\end{itemize}
+
 \section{New Inventory}\label{new-inventory}
 
 The new inventory page allows you to enter new shipments of inventory
-into your database. Digitally managing inventory doesn't just make it
-easier to keep track of products, but it also simplifies the record
-keeping process required for taxes, and other regulations.
-
-\includegraphics{images/newInv.png} \includegraphics{images/newInv2.png}
+into your database. \includegraphics{images/newInv1.png}
+\includegraphics{images/newInv2.png}
 
 \includegraphics{images/newInv3.png}
 \includegraphics{images/newInv4.png}
@@ -362,7 +506,7 @@ There are several required fields in the new inventory form:
 \item
   Product Type (i.e.~flower vs concentrate vs edible etc.)
 \item
-  Strain (No strain is an option, but must be explicitely selected)
+  Strain (No strain is an option, but must be explicitly selected)
 \item
   Wholesaler
 \item
@@ -379,6 +523,8 @@ required sometimes:
 \begin{itemize}
 \item
   Product Name (required if no strain selected)
+\item
+  URL
 \item
   Specific Product Type (i.e.~is concentrate wax/shatter/kief? is edible
   cookie/brownie/cheeseburger?)
@@ -435,9 +581,9 @@ wholesalers on the main page.
 \end{figure}
 
 When you select an item you are taken to the product information page.
-This includes a variety of tables regarding the specific product with
-the option to edit. Buttons at the top allow to quickly add more
-inventory and print barcodes for the product.
+This includes several tables regarding the specific product with the
+option to edit. Buttons at the top allow to quickly add more inventory
+and print barcodes for the product.
 
 \begin{figure}
 \centering
@@ -517,6 +663,45 @@ The product info page has a ``print label'' button, which provides the
 user with a choice of either printing \emph{simple} labels for the
 second method, or prepackaging the product.
 
+\begin{figure}
+\centering
+\includegraphics{images/label1.png}
+\caption{Select label type and printer}
+\end{figure}
+
+If you select prepackage, you must enter the quantity being prepackaged,
+and the number of packages (i.e.~if you plan on packaging 25 1/8th
+containers you would enter 3.5 grams, and 25 packages)
+
+\begin{figure}
+\centering
+\includegraphics{images/label2.png}
+\caption{Prepackage prompt}
+\end{figure}
+
+Labels contain QR codes, which internally function as regular barcodes.
+Outside of the application, the QR codes point to the item's info page
+on your online menu.
+
+Simple labels are primarily used internally.
+
+\begin{figure}
+\centering
+\includegraphics{images/simplelabel.png}
+\caption{Simple Label}
+\end{figure}
+
+Prepackage labels display display the quantity.
+
+\begin{figure}
+\centering
+\includegraphics{images/prepackagelabel.png}
+\caption{Prepackage label}
+\end{figure}
+
+More detailed \href{point-of-sales.html\#labels-1}{labels are printed at
+point of sale} when item is not prepackaged.
+
 \chapter{Point of Sales}\label{point-of-sales}
 
 The point-of-sales application provides facilities for:
@@ -532,13 +717,22 @@ The point-of-sales application provides facilities for:
 
 \section{Patient Selection}\label{patient-selection}
 
-To begin, you must select the current patient. The list of checked-in
+Most transaction begin by selecting the patient. The list of checked-in
 patients is available in the navbar.
 
 \begin{figure}
 \centering
 \includegraphics{images/P1.png}
 \caption{Checked-in Patients can be selected in navbar}
+\end{figure}
+
+If you scan a barcode, or select an item without choosing a patient
+first you must select the patient when adding the item to the cart.
+
+\begin{figure}
+\centering
+\includegraphics{images/cart1.png}
+\caption{Select patient when adding to cart}
 \end{figure}
 
 \section{Patient Info}\label{patient-info}
@@ -551,8 +745,8 @@ Once a patient is selected, their information appears at the top.
 \caption{Patient info appears once patient is selected}
 \end{figure}
 
-A more information about the patient is available by pressing the
-eyeball to the top right of the patient information.
+More information about the patient is available by pressing the eyeball
+to the top right of the patient information.
 
 \begin{figure}
 \centering
@@ -576,9 +770,9 @@ by selecting an item from the inventory table. When scanned, or
 selected, the budtender is prompted to enter the exact information about
 the sale: the quantity sold, and the price. The budtender also has the
 option of applying a discount. (The discount info is automatically
-populated if you register the coupon in the connect app i.e.~if you
-create Wax Wednesday the discount will automaticaly populate for
-concentrates on Wednesdays)
+populated if you \href{connect.html\#coupons}{register the coupon in the
+connect app} i.e.~if you create Wax Wednesday the discount will
+automatically populate for concentrates on Wednesdays)
 
 \begin{figure}
 \centering
@@ -606,6 +800,17 @@ Item's in the cart can be edited by pressing the green pencil.
 \centering
 \includegraphics{images/P7.png}
 \caption{Cart after adding Banana OG}
+\end{figure}
+
+\section{Labels}\label{labels-1}
+
+When non-prepackaged flower, or concentrate is added to cart a label is
+generated. The QR points to the product's info page on your web menu.
+
+\begin{figure}
+\centering
+\includegraphics{images/poslabel.png}
+\caption{Label generated at sale}
 \end{figure}
 
 \section{Searching}\label{searching}
@@ -640,9 +845,16 @@ the transaction is complete.
 \caption{After submitting amount paid, the amount of charge is given}
 \end{figure}
 
-\chapter{Connect}\label{connect}
+A receipt is generated with your logo, and a QR code pointing to a
+online survey about the products they purchased.
 
-\textbf{UNDER CONSTRUCTION}
+\begin{figure}
+\centering
+\includegraphics{images/receipt.png}
+\caption{Receipt with CannaData logo}
+\end{figure}
+
+\chapter{Connect}\label{connect}
 
 Many dispensaries try to encourage patients to come to their store with
 coupons, and targeted messages. The Connect Application provides
@@ -654,6 +866,39 @@ facilities for:
 \item
   Reaching out to patients via text, or email
 \end{itemize}
+
+\section{Sidebar}\label{sidebar-2}
+
+On the left of the page is a sidebar with five options. The five
+subpages are:
+
+\begin{itemize}
+\item
+  Homepage: where you can view all coupons, and past messages.
+\item
+  New Coupon: where new coupons can be created.
+\item
+  Coupon Info: when a coupon is selected this page displays information
+  about the coupon.
+\item
+  New Message: where new messages can be created.
+\item
+  Message Info: when a message is selected this page displays
+  information about the message.
+\end{itemize}
+
+\section{Homepage}\label{homepage}
+
+The homepage has tables listing all coupons, and past messages. You can
+view more information about a coupon or message by pressing the info
+button in the homepage or by selecting the item in the search bar at the
+top.
+
+\begin{figure}
+\centering
+\includegraphics{images/connect1.png}
+\caption{Homepage}
+\end{figure}
 
 \section{Coupons}\label{coupons}
 
@@ -667,8 +912,8 @@ The required information for a new coupon is:
 \item
   A discount (either a flat amount i.e. \$10, or a percentage i.e.~10\%)
 \item
-  A minimum (either a minimum total amount spent i.e. \$60, or a
-  quantity i.e.~3.5 grams)
+  A minimum quantity or amount (either a minimum total amount spent i.e.
+  \$60, or a quantity i.e.~3.5 grams)
 \item
   Which products the discount applies to. Options include:
 \end{itemize}
@@ -681,6 +926,8 @@ The required information for a new coupon is:
 \item
   All products of a certain type (i.e.~on Wax Wednesdays you discount
   \textbf{all} concentrates)
+\item
+  All products of a strain type (i.e.~Sativa Saturday)
 \item
   Specific products
 \end{enumerate}
@@ -712,16 +959,18 @@ The required information for a new coupon is:
 \subsection{Coupon Info}\label{coupon-info}
 
 You can view information about existing coupons by selecting them in the
-search box in the top. The coupon info page provides basic information
-that can be edited as well as a list of current inventory that is
-discounted when the coupon is active. There is a graph of daily sales
-for the discounted products, which enables you to see if the coupon
-created a positive bump.
+search box in the top or in from the table in the homepage. The coupon
+info page provides basic information that can be edited as well as a
+list of current inventory that are discounted when the coupon is active.
+
+\includegraphics{images/C4.png} There is a graph of daily sales for the
+discounted products, which enables you to see if the coupon created a
+positive bump.
 
 \begin{figure}
 \centering
-\includegraphics{images/C4.png}
-\caption{Info for Wax Wednesday}
+\includegraphics{images/C5.png}
+\caption{Graph of Sales}
 \end{figure}
 
 \section{Messages}\label{messages}
@@ -731,8 +980,6 @@ created a positive bump.
 To send a new message out to patients you are required to enter:
 
 \begin{itemize}
-\item
-  A name
 \item
   Message type (text or email)
 \item
@@ -745,29 +992,134 @@ To send a new message out to patients you are required to enter:
 
 \begin{figure}
 \centering
-\includegraphics{images/C5.png}
+\includegraphics{images/C6.png}
 \caption{New Text Message}
 \end{figure}
 
 \begin{figure}
 \centering
-\includegraphics{images/C6.png}
+\includegraphics{images/C7.png}
+\caption{New Text targetted at patients who like concentrates}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{images/C8.png}
 \caption{New Email}
 \end{figure}
 
 \subsection{Message Info}\label{message-info}
 
-You can review the info about past messages by selected the message in
-the search box at the top. This will give you basic info about the
-message like when it was sent, to whom, and its content. There is also a
-graph of daily sales of the patients who were messaged, which makes it
-easy to check whether the message led to a noticable increase in sales.
+You can review the info about past messages by selecting the message in
+the search box at the top or in the table in the homepage. This will
+give you basic info about the message like when it was sent, to whom,
+and its content. There is also a graph of daily sales of the patients
+who were messaged, which makes it easy to check whether the message led
+to a noticeable increase in sales.
 
 \begin{figure}
 \centering
-\includegraphics{images/C7.png}
+\includegraphics{images/C10.png}
 \caption{Message Info for Wax Alert}
 \end{figure}
+
+\chapter{Online}\label{online}
+
+CannaData makes it easy to integrate an online menu, and preorders into
+your website. This documentation explains how online preorders are
+processed. For information on how to embed the CannaData menu and
+preorder platform into your website please
+\href{mailto:carl@cannadatasolutions.com}{contact a CannaData
+representative}.
+
+\section{Menu}\label{menu}
+
+The online menu provides consumers with an easy to navigate platform,
+where they can view information about your products, and make preorders.
+
+The top of the page provides a search bar, and icons for each product
+type. You can easily jump to the section related to the products you are
+interested in by pressing the icon for that product type.
+
+\begin{figure}
+\centering
+\includegraphics{images/M1.png}
+\caption{Top of menu}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{images/M2.png}
+\caption{Lower down in menu}
+\end{figure}
+
+When you select an item, the product info page appears. If available,
+this page includes the the product's THC and CBD content, a description,
+links to the product's website, the wholesaler's website, and the option
+to add the item to your cart.
+
+\begin{figure}
+\centering
+\includegraphics{images/M3.png}
+\caption{Product Info}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{images/M4.png}
+\caption{Product Info with details}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{images/M5.png}
+\caption{Product Info for product without details}
+\end{figure}
+
+After items are added to the cart, a cart will appear in the lower right
+corner displaying the number of items added.
+
+\begin{figure}
+\centering
+\includegraphics{images/M6.png}
+\caption{Cart}
+\end{figure}
+
+Clicking on the cart lets you view the items, edit them, or check out.
+
+\begin{figure}
+\centering
+\includegraphics{images/M7.png}
+\caption{Cart screen}
+\end{figure}
+
+When checking out the patient must enter their contact information, and
+prove they are not a robot.
+
+\begin{figure}
+\centering
+\includegraphics{images/M8.png}
+\caption{Check out}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{images/M9.png}
+\caption{Check out completed}
+\end{figure}
+
+After they submit the order, they will receive a message by SMS, and
+email with a confirmation link. The patient must click the link, and
+confirm they are not a robot for the preorder to be processed.
+
+\begin{figure}
+\centering
+\includegraphics{images/M11.png}
+\caption{Confirmation link}
+\end{figure}
+
+Once the patient confirms their order the order will appear in the
+\href{frontdesk.html\#online-orders}{frontdesk discussed here}.
 
 
 \end{document}
